@@ -91,50 +91,9 @@ const holidays = {
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
   const guild = client.guilds.cache.get(GUILD_ID);
-  //   const guild2 = client.guilds.get(GUILD_ID);
-  //   console.log(guild.members.cache.);
-  //   guild.members.fetch().then((members) => {
-  //       console.log(members);
-  //     members.forEach((member) => console.log(member));
-  //   });
-  //   let member = guild.members.cache.get("233401559180902400");
-  //   console.log(member);
 });
 
-// can't set nickname due to permissions
 client.on("messageCreate", async (message) => {
-  if (message.content === "test") {
-    try {
-      message.channel.send("Changing nickname...");
-      let member = message.guild.members.cache.get("233401559180902400"); // jynx ID
-      console.log(member);
-      member.setNickname("test");
-      message.channel.send("Nickname changed.");
-    } catch {
-      message.channel.send(
-        "Something went wrong when attempting to fetch members."
-      );
-    }
-  }
-
-  // can't change roles due to permissions
-  if (message.content === "role") {
-    try {
-      const role = message.guild.roles.cache.find(
-        (role) => role.name === "j00bz"
-      );
-
-      role.edit({
-        color: "#c14a8e",
-      });
-      message.channel.send("Changed color.");
-    } catch {
-      message.channel.send(
-        "Something went wrong when attempting to change role color."
-      );
-    }
-  }
-
   if (message.content === "$commands") {
     let commands = "Commands:\n";
     for (const holiday in holidays) {
