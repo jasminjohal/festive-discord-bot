@@ -56,36 +56,36 @@ const holidays = {
     noot: `${noot_name} 🌮 | ${colors.discord_yellow}`,
     jynx: `${jynx_name} 🥑 | ${colors.discord_red}`,
   },
-  //   $birthday: {
-  //     server_picture: "",
-  //     server_name: "Happy Jykesday 🎂",
-  //     noot: `${noot_name} 🎉 | ${colors.discord_green}`,
-  //     jynx: `${jynx_name} 🎈 | ${colors.light_pink}`,
-  //   },
+  $birthday: {
+    server_picture: "cali_birthday.png",
+    server_name: "Happy Jykesday 🎂",
+    noot: `${noot_name} 🎉 | ${colors.discord_green}`,
+    jynx: `${jynx_name} 🎈 | ${colors.light_pink}`,
+  },
   $halloween: {
     server_picture: "cali_halloween.png",
     server_name: "Happy Jykesoween 🎃",
     noot: `${noot_name} 🕸️ | ${colors.discord_orange}`,
     jynx: `${jynx_name} 🦇 | ${colors.black}`,
   },
-  //   $thanksgiving: {
-  //     server_picture: "",
-  //     server_name: "Happy Jykesgiving 🦃",
-  //     noot: `${noot_name} 🥔 | ${colors.brown}`,
-  //     jynx: `${jynx_name} 🍁 | ${colors.discord_red}`,
-  //   },
+  $thanksgiving: {
+    server_picture: "cali_thanksgiving.png",
+    server_name: "Happy Jykesgiving 🦃",
+    noot: `${noot_name} 🥔 | ${colors.brown}`,
+    jynx: `${jynx_name} 🍁 | ${colors.discord_red}`,
+  },
   $christmas: {
     server_picture: "santa_cali.png",
     server_name: "Merry Jykesmas 🎅",
     noot: `${noot_name} 🎄 | ${colors.discord_green}`,
     jynx: `${jynx_name} ☃️ | ${colors.discord_red}`,
   },
-  //   $new_year: {
-  //     server_picture: "",
-  //     server_name: "Happy New Jykes 🎆",
-  //     noot: `${noot_name} 🎊 | ${colors.discord_blue}`,
-  //     jynx: `${jynx_name} 🥂 | ${colors.discord_yellow}`,
-  //   },
+  $new_year: {
+    server_picture: "cali_new_year.png",
+    server_name: "Happy New Jykes 🎆",
+    noot: `${noot_name} 🎊 | ${colors.discord_blue}`,
+    jynx: `${jynx_name} 🥂 | ${colors.discord_yellow}`,
+  },
 };
 
 client.on("ready", () => {
