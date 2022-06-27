@@ -31,9 +31,9 @@ client.on("messageCreate", async (message) => {
       message.channel.send("Successfully changed guild name and icon!");
 
       // send a message with role colors if the holiday object includes them
-      if (holiday.noot && holiday.jynx) {
+      if (holiday.memberOne && holiday.memberTwo) {
         message.channel.send(
-          `Change the following nicknames and role colors for the full effect:\n${holiday.jynx}\n${holiday.noot}`
+          `Change the following nicknames and role colors for the full effect:\n${holiday.memberOne}\n${holiday.memberTwo}`
         );
       }
     } catch {
