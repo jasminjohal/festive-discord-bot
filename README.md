@@ -2,11 +2,11 @@
 
 ## About
 
-One of my Discord servers likes to change the server picture and server name for every holiday to get into the holiday spirit. 👻 This bot automates that process so that we only have to type the command `$christmas`, for example, to change the server name and picture to something christmas-related.
+One of my Discord servers likes to change the server picture and server name for every holiday to get into the holiday spirit. This is tedious to perform for every holiday so I developed a bot to automate that process. For example, I just have to type the command `$christmas` to change the server name and picture to something Christmas-related.
 
 ![Server name and picture](img/server.png)
 
-Unfortunately, the bot cannot automatically change role colors or member nicknames due to role hierarchies and permission issues. Instead, it will just send a message to the channel with the recommended role colors and member nicknames.
+Our server also likes to change all members' role colors and nicknames but unfortunately, the bot cannot automatically change these properties due to role hierarchies and permission issues. Instead, it will just send a message to the channel with the recommended role colors and member nicknames.
 
 ![Bot message](img/msg.png)
 
