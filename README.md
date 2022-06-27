@@ -2,7 +2,7 @@
 
 ## About
 
-One of my Discord servers likes to change the server picture and server name for every holiday to get into the holiday spirit. 👻 This bot automates that process so that we only have to type the command `$halloween`, for example, to change the server name and picture to something halloween-related.
+One of my Discord servers likes to change the server picture and server name for every holiday to get into the holiday spirit. 👻 This bot automates that process so that we only have to type the command `$christmas`, for example, to change the server name and picture to something christmas-related.
 
 ![Server name and picture](img/server.png)
 
