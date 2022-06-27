@@ -6,85 +6,88 @@ const client = new Client({
 const GUILD_ID = process.env.DISCORD_GUILD;
 const TOKEN = process.env.DISCORD_TOKEN;
 
-const jynx_name = "Jynx";
-const noot_name = "Noobert";
+const jynxName = "Jynx";
+const nootName = "Noobert";
 
 const colors = {
-  discord_yellow: "#f1c40f",
-  discord_green: "#2ecc71",
-  discord_red: "#e74c3c",
-  discord_orange: "#e67e22",
-  discord_blue: "#3498db",
+  discordYellow: "#f1c40f",
+  discordGreen: "#2ecc71",
+  discordRed: "#e74c3c",
+  discordOrange: "#e67e22",
+  discordBlue: "#3498db",
   yellow: "#efd466",
   cyan: "#7bdad1",
-  light_pink: "#eca4e7",
+  lightPink: "#eca4e7",
   brown: "#b78c55",
   black: "#000000",
 };
 
+/* each key is a command and the corresponding value is what the 
+server picture and server name will be after using the command. some commands
+will also output recommended role colors */
 const holidays = {
   $default_bot: {
-    server_picture: "robot.jpg",
-    server_name: "Bot Testing",
+    serverPicture: "robot.jpg",
+    serverName: "Bot Testing",
   },
   $default_jykes: {
-    server_picture: "cali.jpg",
-    server_name: "Jykes",
+    serverPicture: "cali.jpg",
+    serverName: "Jykes",
   },
   $valentines_day: {
-    server_picture: "cali_valentine.jpg",
-    server_name: "Happy Valenjykes Day ❤️",
-    noot: `${noot_name} 💞 | ${colors.discord_red}`,
-    jynx: `${jynx_name} 💖 | ${colors.light_pink}`,
+    serverPicture: "cali_valentine.jpg",
+    serverName: "Happy Valenjykes Day ❤️",
+    noot: `${nootName} 💞 | ${colors.discordRed}`,
+    jynx: `${jynxName} 💖 | ${colors.lightPink}`,
   },
   $st_patricks: {
-    server_picture: "st_cali.jpg",
-    server_name: "Happy St. Jykes Day ☘️",
+    serverPicture: "st_cali.jpg",
+    serverName: "Happy St. Jykes Day ☘️",
     vc_name: "lookin' for gold",
-    noot: `${noot_name} 🌈 | ${colors.discord_green}`,
-    jynx: `${jynx_name} 🎩 | ${colors.discord_yellow}`,
+    noot: `${nootName} 🌈 | ${colors.discordGreen}`,
+    jynx: `${jynxName} 🎩 | ${colors.discordYellow}`,
   },
   $easter: {
-    server_picture: "cali_easter.jpg",
-    server_name: "Happy Jykes Easter 🐰",
-    noot: `${noot_name} 🐇 | ${colors.cyan}`,
-    jynx: `${jynx_name} 🌸 | ${colors.light_pink}`,
+    serverPicture: "cali_easter.jpg",
+    serverName: "Happy Jykes Easter 🐰",
+    noot: `${nootName} 🐇 | ${colors.cyan}`,
+    jynx: `${jynxName} 🌸 | ${colors.lightPink}`,
   },
   $cinco_de_mayo: {
-    server_picture: "cinco_de_cali.jpg",
-    server_name: "Feliz Cinco De Jykes 🌵",
-    noot: `${noot_name} 🌮 | ${colors.discord_yellow}`,
-    jynx: `${jynx_name} 🥑 | ${colors.discord_red}`,
+    serverPicture: "cinco_de_cali.jpg",
+    serverName: "Feliz Cinco De Jykes 🌵",
+    noot: `${nootName} 🌮 | ${colors.discordYellow}`,
+    jynx: `${jynxName} 🥑 | ${colors.discordRed}`,
   },
   $birthday: {
-    server_picture: "cali_birthday.png",
-    server_name: "Happy Jykesday 🎂",
-    noot: `${noot_name} 🎉 | ${colors.discord_green}`,
-    jynx: `${jynx_name} 🎈 | ${colors.light_pink}`,
+    serverPicture: "cali_birthday.png",
+    serverName: "Happy Jykesday 🎂",
+    noot: `${nootName} 🎉 | ${colors.discordGreen}`,
+    jynx: `${jynxName} 🎈 | ${colors.lightPink}`,
   },
   $halloween: {
-    server_picture: "cali_halloween.png",
-    server_name: "Happy Jykesoween 🎃",
-    noot: `${noot_name} 🕸️ | ${colors.discord_orange}`,
-    jynx: `${jynx_name} 🦇 | ${colors.black}`,
+    serverPicture: "cali_halloween.png",
+    serverName: "Happy Jykesoween 🎃",
+    noot: `${nootName} 🕸️ | ${colors.discordOrange}`,
+    jynx: `${jynxName} 🦇 | ${colors.black}`,
   },
   $thanksgiving: {
-    server_picture: "cali_thanksgiving.png",
-    server_name: "Happy Jykesgiving 🦃",
-    noot: `${noot_name} 🥔 | ${colors.brown}`,
-    jynx: `${jynx_name} 🍁 | ${colors.discord_red}`,
+    serverPicture: "cali_thanksgiving.png",
+    serverName: "Happy Jykesgiving 🦃",
+    noot: `${nootName} 🥔 | ${colors.brown}`,
+    jynx: `${jynxName} 🍁 | ${colors.discordRed}`,
   },
   $christmas: {
-    server_picture: "santa_cali.png",
-    server_name: "Merry Jykesmas 🎅",
-    noot: `${noot_name} 🎄 | ${colors.discord_green}`,
-    jynx: `${jynx_name} ☃️ | ${colors.discord_red}`,
+    serverPicture: "santa_cali.png",
+    serverName: "Merry Jykesmas 🎅",
+    noot: `${nootName} 🎄 | ${colors.discordGreen}`,
+    jynx: `${jynxName} ☃️ | ${colors.discordRed}`,
   },
   $new_year: {
-    server_picture: "cali_new_year.png",
-    server_name: "Happy New Jykes 🎆",
-    noot: `${noot_name} 🎊 | ${colors.discord_blue}`,
-    jynx: `${jynx_name} 🥂 | ${colors.discord_yellow}`,
+    serverPicture: "cali_new_year.png",
+    serverName: "Happy New Jykes 🎆",
+    noot: `${nootName} 🎊 | ${colors.discordBlue}`,
+    jynx: `${jynxName} 🥂 | ${colors.discordYellow}`,
   },
 };
 
@@ -94,6 +97,7 @@ client.on("ready", () => {
 });
 
 client.on("messageCreate", async (message) => {
+  // list all available commands to the user
   if (message.content === "$commands") {
     let commands = "Commands:\n";
     for (const holiday in holidays) {
@@ -104,10 +108,13 @@ client.on("messageCreate", async (message) => {
 
   if (message.content in holidays) {
     try {
+      // change server picture and name
       const holiday = holidays[message.content];
-      await message.guild.setIcon(`./img/${holiday.server_picture}`);
-      await message.guild.setName(holiday.server_name);
+      await message.guild.setIcon(`./img/${holiday.serverPicture}`);
+      await message.guild.setName(holiday.serverName);
       message.channel.send("Successfully changed guild name and icon!");
+
+      // send a message with role colors if applicable
       if (holiday.noot && holiday.jynx) {
         message.channel.send(
           `Change the following nicknames and role colors for the full effect:\n${holiday.jynx}\n${holiday.noot}`
