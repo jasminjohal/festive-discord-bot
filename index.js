@@ -1,8 +1,13 @@
 require("dotenv").config();
 const holidays = require("./holidays");
-const { Client, Intents } = require("discord.js");
+const { Client, GatewayIntentBits } = require("discord.js");
 const client = new Client({
-  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMembers,
+  ],
 });
 const GUILD_ID = process.env.DISCORD_GUILD;
 const TOKEN = process.env.DISCORD_TOKEN;
